@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Sara Missak">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems, student, freshman">
+    <meta name="description" content="Sara Missak professional website">
+
+    <title>Sara Missak</title>
+
+</head>
+
+<body>
+    <h1>Sara Missak</h1>
+    <h3>Carnegie Mellon Univeristy, Information Systems</h3>
+    <nav>
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div id="content">
+        <h3>Contact</h3>
+        <form>
+            <fieldset>
+                <legend>Tell me more about yourself</legend>
+                <label>Name:</label><br>
+                <input type="text" id="name" name="name" value="Your Name" size="20" maxLength="250"><br>
+                <label>Your date of birth:</label><br>
+                <input type="date" id="birthday" name="birthday"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Tell me aboout your preferences</legend>
+                <label>Your favorite flower color:</label><br>
+                <input type="color" id="color" name="favoriteFlowerColor"><br>
+                <label>Message:</label><br>
+                <textarea rows="10" cols="50" maxlength="10000"></textarea><br>
+            </fieldset>
+            <fieldset>
+                <legend>Let's stay in touch</legend>
+                <label>How did you find out about me?:</label>
+                <select id="findOut" name="findOut">
+                    <option value="Google">Google</option>
+                    <option value="News article">News article</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Other">Other</option>
+                </select><br>
+
+                <label>Please indicate if you want to receive news updates via email:</label><br>
+                <input type="checkbox" name="emailUpdates" value="emailUpdates">
+                <label>Yes, Please update me!</label><br>
+                <label>Please provide your email address:</label><br>
+                <input type="email" id="email" name="email" value="abc@def.com" required><br>
+                <label>Choose a password:</label><br>
+                <input type="password" size="20"><br>
+            </fieldset>
+            <fieldset>
+                <input type="image" src="images/submit.png" alt="submit">
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="sidebar">
+        <h3>Contact</h3>
+        <strong>Sara Missak</strong>
+        <a href="https://www.cmu.edu" target="_blank">Carnegie Mellon University</a><br/> 5000 Forbes Avenue <br/> Pittsburgh, PA <br/> 412-268-0000 (h) <br/> 412-555-5555 (c) <br/>
+        <a href="mailto:smissak@andrew.cmu.edu"><img src="images/email.png" alt="email"></a>
+        <a href="https://www.linkedin.com/in/sara-missak-161218168/"><img src="images/linkedIn.png" alt="linkedin"></a>
+        <a href="https://www.facebook.com/sara.missak.10"><img src="images/facebook.png" alt="facebook"></a>
+    </div>
+
+    <footer>
+        <hr/> &copy; Sara Missak<br/>
+        <a href="mailto:smissak@andrew.cmu.edu">Email Me!</a>
+        <a href="https://cmu.edu" target="_blank">Carnegie Mellon Univerity</a>
+    </footer>
+</body>
+
+</html>

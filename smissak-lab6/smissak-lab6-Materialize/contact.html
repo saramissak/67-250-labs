@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Sara Missak">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems, student, freshman">
+    <meta name="description" content="Sara Missak professional website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery.lightbox.css" />
+
+    <!-- External link to CSS files for smart phones -->
+    <link rel="stylesheet" media="screen and (max-width: 480px)" type="text/css" href="css/stylesmobile.css" />
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.lightbox.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(function() {
+            $("#container-graph").highcharts({
+                chart: {
+                    type: 'line'
+                },
+                title: {
+                    text: 'Weekly Work Load by Month'
+                },
+                subtitle: {
+                    text: 'Quarantine times :)'
+                },
+                xAxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Average Number of Hours Worked on School Each Week'
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: false
+                    }
+                },
+                series: [{
+                    name: '2018',
+                    data: [47, 69, 21, 34, 48, 25, 25, 26, 32, 38, 39, 69]
+                }, {
+                    name: '2019',
+                    data: [39, 42, 57, 85, 91, 52, 70, 66, 42, 93, 66, 48]
+                }]
+            });
+        });
+    </script>
+
+    <title>Sara Missak</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Sara Missak</h1>
+        <h3>Carnegie Mellon Univeristy, Information Systems</h3>
+    </header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Sara Missak</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="index.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div id="content">
+                        <h3>Contact</h3>
+                        <p>Please use the below map to find me.</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.405158063199!2d-79.94556118498538!3d40.44416876189491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f2218bddc99f%3A0xeea6ccadbf7b721e!2sWarner%20Hall%2C%205000%20Forbes%20Ave%2C%20Pittsburgh%2C%20PA%2015213!5e0!3m2!1sen!2sus!4v1585021258652!5m2!1sen!2sus"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <p>Please check to see when I'm free.</p>
+                        <div id="container-graph"></div>
+                        <p>Please use the form below to get in touch with me.</p>
+                        <form onsubmit="return validate()">
+
+                            <fieldset>
+                                <legend>Tell me more about yourself</legend>
+                                <label for="uname">Name:</label> <br/>
+                                <input type="text" id="uname" name="uname" value="Your Name" size="20" maxlength="250"><br/><br/>
+                                <label for="txtDate">Your date of birth:</label> <br>
+                                <input type="date" id="txtDate" name="txtDate" value="" size="20" required><br/><br/>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Tell me about your preferences</legend>
+                                <label for="flower">Your favorite flower color:</label> <br/>
+                                <input type="color" id="flower" name="flower"><br/><br/>
+                                <label for="message">Message:</label> <br/>
+                                <textarea id="message" name="message" rows="10" cols="50" maxlength="1000"> </textarea><br/><br/>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Let's stay in touch</legend>
+                                <label for="source">How did you find out about me?</label>
+                                <select id="source">
+				<option value="Google" selected>Google</option>
+				<option value="news">News article</option>
+				<option value="friend">Friend</option>
+				<option value="other">Other</option>
+			</select><br/><br/>
+
+                                <label>Please indicate if you want to receive updates via email:</label><br/>
+                                <input type="checkbox" id="signup" name="signup" value="yes">Yes, please update me!<br/><br/>
+                                <label for="email">Please provide your email address:</label><br/>
+                                <input type="email" id="email" name="email" value="" placeholder="abc@defg.com" required><br/><br/>
+                                <label for="phone">Please provide your phone number(no dashes or spaces):</label><br/>
+                                <input type="text" id="phone" name="phone" value="" placeholder="1234567890" required><br/><br/>
+                                <label for="pswrd">Choose a password:</label><br/>
+                                <input type="password" id="pswrd" name="pswrd" value="" size="20" maxlength="20"><br/>
+                            </fieldset>
+
+                            <fieldset>
+                                <input type="image" src="images/submit.png" alt="Submit" name="btnimage">
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <a href="mailto:smissak@andrew.cmu.edu"><img src="images/email.png" alt="email"></a>
+                    <a href="https://www.linkedin.com/in/sara-missak-161218168/"><img src="images/linkedIn.png" alt="linkedin"></a>
+                    <a href="https://www.facebook.com/sara.missak.10"><img src="images/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; Sara Missak <br/> 5000 Forbes Avenue <br/> Pittsburgh, PA <br/> 412-268-0000 (h) <br/> 412-555-5555 (c) <br/><br />
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
